@@ -17,7 +17,7 @@ User.hasMany(Repair);
 Repair.belongsTo(User);
 
 // to apply the changes in our models/ tables use: { force:true }
-db.sync()
+db.sync({ force: true })
   .then(() => {
     console.log('creating tables that did not exist');
   })
